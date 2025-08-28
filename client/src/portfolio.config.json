@@ -1,0 +1,23 @@
+{
+  "name": "Your Name",
+  "title": "Web Developer & Designer",
+  "avatar": "https://avatars.githubusercontent.com/u/1?v=4",
+  "bio": "A short bio about yourself.",
+  "skills": ["React", "TypeScript", "TailwindCSS", "Node.js"],
+  "projects": [
+    {
+      "title": "Project One",
+      "description": "Description of project one.",
+      "link": "https://github.com/your/project-one"
+    },
+    {
+      "title": "Project Two",
+      "description": "Description of project two.",
+      "link": "https://github.com/your/project-two"
+    }
+  ],
+  "contact": {
+    "email": "your@email.com",
+    "linkedin": "https://linkedin.com/in/yourprofile"
+  }
+}
