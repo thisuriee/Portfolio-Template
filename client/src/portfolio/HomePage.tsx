@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useDarkMode } from '../hooks/useDarkMode';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Code, Palette, Smartphone, Globe, MessageSquare, Download, Star, ArrowRight, Play } from 'lucide-react';
 
 // Import your config object (adjust the path as needed)
@@ -9,6 +10,16 @@ const HomePage = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isLoaded, setIsLoaded] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isDark, setIsDark] = useDarkMode();
+
+  // Ensure <html> gets the dark class for Tailwind dark mode
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
   
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
@@ -129,11 +140,26 @@ const HomePage = () => {
   );
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
+  <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 dark:text-gray-100 overflow-x-hidden min-h-screen">
+      {/* Header with theme toggle */}
+      <header className="w-full flex justify-end items-center px-8 py-4 absolute top-0 left-0 z-50">
+        <button
+          onClick={() => setIsDark((prev: boolean) => !prev)}
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white hover:bg-emerald-500/20 hover:border-emerald-400/50 transition-all duration-300 shadow-lg"
+          aria-label="Toggle dark mode"
+        >
+          {isDark ? (
+            <span className="flex items-center"><Palette className="w-5 h-5 mr-1" /> Light Mode</span>
+          ) : (
+            <span className="flex items-center"><Palette className="w-5 h-5 mr-1" /> Dark Mode</span>
+          )}
+        </button>
+      </header>
+
       <FloatingNav />
-      
+
       {/* Dynamic cursor effect */}
-      <div 
+      <div
         className="fixed w-6 h-6 rounded-full bg-emerald-400/30 pointer-events-none z-50 mix-blend-difference transition-all duration-150"
         style={{
           left: mousePosition.x - 12,
@@ -142,9 +168,9 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section 
-        id="hero" 
-        ref={heroRef} 
+      <section
+        id="hero"
+        ref={heroRef}
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
       >
         {/* Animated background */}
