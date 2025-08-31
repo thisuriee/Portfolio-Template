@@ -1,23 +1,35 @@
 {
-  "name": "Your Name",
-  "title": "Web Developer & Designer",
-  "avatar": "https://avatars.githubusercontent.com/u/1?v=4",
-  "bio": "A short bio about yourself.",
-  "skills": ["React", "TypeScript", "TailwindCSS", "Node.js"],
+  "name": "Alex Johnson",
+  "title": "Full Stack Developer & UI/UX Designer",
+  "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+  "bio": "Passionate developer creating amazing digital experiences with modern technologies and creative design solutions.",
+  "skills": ["React", "TypeScript", "Node.js", "Python", "TailwindCSS", "MongoDB", "PostgreSQL", "AWS"],
   "projects": [
     {
-      "title": "Project One",
-      "description": "Description of project one.",
-      "link": "https://github.com/your/project-one"
+      "title": "E-Commerce Platform",
+      "description": "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, payment processing, and admin dashboard.",
+      "link": "https://github.com/example/ecommerce",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      "tech": ["React", "Node.js", "MongoDB", "Stripe"]
     },
     {
-      "title": "Project Two",
-      "description": "Description of project two.",
-      "link": "https://github.com/your/project-two"
+      "title": "Task Management App",
+      "description": "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "link": "https://github.com/example/taskmanager",
+      "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
+      "tech": ["React", "TypeScript", "Socket.io", "PostgreSQL"]
+    },
+    {
+      "title": "Weather Analytics Dashboard",
+      "description": "Interactive weather dashboard with data visualization, forecasting, and location-based weather tracking using modern APIs.",
+      "link": "https://github.com/example/weather",
+      "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
+      "tech": ["React", "D3.js", "OpenWeather API", "Chart.js"]
     }
   ],
   "contact": {
-    "email": "your@email.com",
-    "linkedin": "https://linkedin.com/in/yourprofile"
+    "email": "alex@example.com",
+    "linkedin": "https://linkedin.com/in/alexjohnson",
+    "github": "https://github.com/alexjohnson"
   }
 }
