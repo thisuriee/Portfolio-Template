@@ -11,7 +11,7 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ longDescription }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredStat, setHoveredStat] = useState<number | null>(null);
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -83,7 +83,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ longDescription }) => {
     return count;
   };
 
-  const CircularProgress = ({ value, label, color }: { value: number; label: string; color: string }) => {
+  const CircularProgress = ({ value, label }: { value: number; label: string }) => {
     const animatedValue = useCounter(value);
     const circumference = 2 * Math.PI * 45;
     const strokeDasharray = circumference;
@@ -230,7 +230,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ longDescription }) => {
                 key={index}
                 value={stat.value}
                 label={stat.label}
-                color={stat.color}
               />
             ))}
           </div>

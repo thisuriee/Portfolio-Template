@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import config from '../portfolio.config.json';
+
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
